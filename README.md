@@ -20,12 +20,17 @@ Database Schema : in folder Database Schema. </br>
 
 Postman Collection for functional testing : in folder  Postman Collection. </br>  
 
-# How to test :
+# How to test (using Postman):
 
-1. use POST /api/auth/signup folder User Authentication to register user</br>  
+1. use POST /api/auth/signup folder User Authentication and click the button "Send" to register user</br>  
 2. use POST /api/auth/login in folder User Authentication to login</br>  
 3. use POST /api/carts/ in folder Carts to start cart  
    You will get cartToken and cartKey</br> 
 3. use POST /api/carts/:CartToken in folder Carts to add cart</br>
    replace f9508a7d6e438beddb6912f7f90f2b12 with cartToken from no 3.</br> 
-   Replace cartKey in body raw with cartKey from no 3.
+   Replace cartKey in body raw with cartKey from no 3.</br>
+   Replace productID with id of products from such as 21 </br>
+   Replace quantity with 30 and click the button "Send"</br>
+4. use POST /api/carts/:CartToken/checkout in folder Carts to order the cart</br>
+   You will get validation 'The quantity you're ordering of  isn't available in stock'  
+  
