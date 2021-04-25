@@ -14,7 +14,7 @@ $ php artisan migrate </br>
 $ php artisan passport:install </br>
 $ php artisan db:seed </br>
 $ php artisan serve </br>
-then open postman and import Postman Collection
+then open Postman and import Postman Collection
 
 # Notes :
 
