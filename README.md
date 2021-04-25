@@ -3,7 +3,8 @@
 What will prevent this to happen is that the IT Developer must prevent customer to add product that has UnitsInStock equals 0 or total quantity higher UnitsInStock
 before they can submit the cart order. There will be message to inform this.  </br>
 
-I am using php laravel. </br>  
+#technology Used :
+I am using php laravel, API, Postman, authentication, MYSQL.
 
 # Instalation and running:
 $ composer install </br>
