@@ -42,7 +42,7 @@ Postman Collection (API endpoints design) : in folder Postman Collection. </br>
    Open table products in database.
    Replace productID in body raw with one of the id from products for example id = 6.</br>
    Replace quantity in body raw with a number higher than UnitsInStock of the products.</br>
-   Note : if id = 6 has UnitsInStock = 20 then Replace quantity in body raw with 21.</br>
+   Note : if id = 6 has UnitsInStock = 20 then Replace quantity in body raw with 21 or higher.</br>
    Click the button "Send".</br>
 5. Use POST /api/carts/:CartToken/checkout in folder Carts (to order the cart).</br>
    Replace f9508a7d6e438beddb6912f7f90f2b12 in url with cartToken from no 3.</br>
