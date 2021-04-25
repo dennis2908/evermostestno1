@@ -5,15 +5,21 @@ before they can submit the cart order. There will be message to inform this.  </
 
 I am using php laravel. </br>  
 
-# Instalation :
+# Instalation and running:
 $ composer install </br>
 $ php artisan key:generate </br>
 $ php artisan migrate </br>
 $ php artisan passport:install </br>
-$ php artisan db:seed
+$ php artisan db:seed </br>
+$ php artisan serve </br>
+then open postman and import Postman Collection
 
 # Notes :
 
 Database Schema : in folder Database Schema. </br>  
 
 Postman Collection for functional testing : in folder  Postman Collection. </br>  
+
+# How to test :
+
+1. signup in folder User Authentication</br>  

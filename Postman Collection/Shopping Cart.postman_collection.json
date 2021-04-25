@@ -26,7 +26,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"Mohamad Bahamdain\",\n    \"email\": \"mhmd@gmail.com\",\n    \"password\": \"123\",\n    \"password_confirmation\": \"123\"\n}"
+							"raw": "{\n    \"name\": \"Michael Dennis\",\n    \"email\": \"mhmd@gmail.com\",\n    \"password\": \"123\",\n    \"password_confirmation\": \"123\"\n}"
 						},
 						"url": {
 							"raw": "http://127.0.0.1:8000/api/auth/signup",
@@ -1039,10 +1039,10 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"cartKey\": \"0f1a05bb956fee349e8ea41c93db0742\",\n    \"name\": \"Mohamad bahamdain\",\n    \"adress\": \"2\",\n    \"credit card number\": \"4401946526618427\",\n    \"expiration_year\": \"2022\",\n    \"expiration_month\": \"03\",\n    \"cvc\": \"548\"\n}"
+							"raw": "{\n    \"cartKey\": \"057536a843f9e4779b847b0dce3807dd\",\n    \"name\": \"Michael Dennis\",\n    \"adress\": \"2\",\n    \"credit card number\": \"4401946526618427\",\n    \"expiration_year\": \"2022\",\n    \"expiration_month\": \"03\",\n    \"cvc\": \"548\"\n}"
 						},
 						"url": {
-							"raw": "http://127.0.0.1:8000/api/carts/3ccadfc2cbdf2c68ea2c181cf13cd8e3/checkout",
+							"raw": "http://127.0.0.1:8000/api/carts/f9508a7d6e438beddb6912f7f90f2b12/checkout",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -1054,7 +1054,7 @@
 							"path": [
 								"api",
 								"carts",
-								"3ccadfc2cbdf2c68ea2c181cf13cd8e3",
+								"f9508a7d6e438beddb6912f7f90f2b12",
 								"checkout"
 							]
 						},
