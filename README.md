@@ -27,6 +27,11 @@ Database Schema : in folder Database Schema. </br>
 
 Postman Collection (API endpoints design) : in folder Postman Collection. </br>  
 
+# How to do functionality test (using Command Line) :
+
+Use command prompt and direct to root folder and type :</br>
+    $ php vendor/phpunit/phpunit/phpunit</br>
+
 # How to do functionality test (using Postman) :
 
 1. Use POST /api/auth/signup folder User Authentication (to register user).</br>

@@ -14,6 +14,10 @@ class ExampleTest extends TestCase
      */
     public function testBasicTest()
     {
-        $this->assertTrue(true);
+       // $response =  $this->json('POST', '/api/auth/login', ['email' => 'mhmd@gmail.com','password' => '1234'])
+		//->seeStatusCode(200)->decodeResponseJson()->seeJson(['created' => '1']);
+		$response = $this->json('POST', '/api/auth/login', ['email' => 'mhmd@gmail.com','password' => '1234'])->assertJson(['message' => "Unauthorized"]);
+		//print_r($response->seeJson());
+		
     }
 }
