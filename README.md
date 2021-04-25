@@ -27,11 +27,6 @@ Database Schema : in folder Database Schema. </br>
 
 Postman Collection (API endpoints design) : in folder Postman Collection. </br>  
 
-# How to do functionality test (using Command Line) :
-
-Use command prompt and direct to root folder and type :</br>
-    $ php vendor/phpunit/phpunit/phpunit</br>
-
 # To make sure that the API Design is answering the question (using Postman Schema) :
 
 1. Use POST /api/auth/signup folder User Authentication (to register user).</br>
@@ -53,3 +48,8 @@ Use command prompt and direct to root folder and type :</br>
    Replace f9508a7d6e438beddb6912f7f90f2b12 in url with cartToken from no 3.</br>
    Click the button "Send".</br> 
    You will get response message 'The quantity you're ordering of  isn't available in stock'.
+   
+# How to do functionality test (using Command Line) :
+
+Use command prompt and direct to root folder and type :</br>
+    $ php vendor/phpunit/phpunit/phpunit</br>   
