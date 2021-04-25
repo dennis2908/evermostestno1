@@ -8,13 +8,18 @@ before they can submit the cart order. There will be message to inform this.</br
 I am using php laravel, API, Postman, authentication, MYSQL.
 
 # Instalation and running server locally:
-$ composer install </br>
-$ php artisan key:generate </br>
-$ php artisan migrate </br>
-$ php artisan passport:install </br>
-$ php artisan db:seed </br>
-$ php artisan serve </br>
-then open Postman and import Shopping Cart.postman_collection.json
+1. Use command prompt and direct to root folder and type :
+   $ composer install </br>
+2  Rename.env.example to .env in root folder.</br>
+   Open the .env and adjust DB_HOST, DB_PORT, DB_DATABASE, DB_USERNAME, DB_PASSWORD to your MYSQL setting</br>
+3. Use command prompt and direct to root folder and type :  
+   $ php artisan key:generate </br>
+   $ php artisan optimize </br>
+   $ php artisan migrate </br>
+   $ php artisan passport:install </br>
+   $ php artisan db:seed </br>
+   $ php artisan serve </br>
+4. Open Postman and import Shopping Cart.postman_collection.json
 
 # Notes :
 
