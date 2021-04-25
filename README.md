@@ -16,4 +16,4 @@ $ php artisan db:seed
 
 Database Schema : in folder Database Schema. </br>  
 
-Postman Collection  : in folder  Postman Collection. </br>  
+Postman Collection for functional testing : in folder  Postman Collection. </br>  
