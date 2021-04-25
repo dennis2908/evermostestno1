@@ -32,7 +32,7 @@ Postman Collection (API endpoints design) : in folder Postman Collection. </br>
 Use command prompt and direct to root folder and type :</br>
     $ php vendor/phpunit/phpunit/phpunit</br>
 
-# How to do functionality test (using Postman) :
+# To make sure that the API Design is answering the question (using Postman Schema) :
 
 1. Use POST /api/auth/signup folder User Authentication (to register user).</br>
    Click the button "Send".</br>
