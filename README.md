@@ -24,7 +24,7 @@ Postman Collection for functional testing : in folder  Postman Collection. </br>
 
 1. use POST /api/auth/signup folder User Authentication to register user</br>  
 2. use POST /api/auth/login in folder User Authentication to login</br>  
-3. use POST /api/carts/ in folder Carts to start cart</br>  
+3. use POST /api/carts/ in folder Carts to start cart  
    You will get cartToken and cartKey</br> 
 3. use POST /api/carts/:CartToken in folder Carts to add cart</br>  
    replace f9508a7d6e438beddb6912f7f90f2b12 with cartToken from no 3.</br>  
