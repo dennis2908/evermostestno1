@@ -1,0 +1,1712 @@
+{
+	"info": {
+		"_postman_id": "e89e96af-659c-439c-a881-6750073808e8",
+		"name": "Shopping Cart",
+		"description": "This Project was built as a simple backend task that would allow me to earn the opertuninty of doing a co-op training with a company that provides an e-commerce platform as SAAS, the main objective of this task was to assess how much I can finish and learn given time constraint.\r\n\r\n## Task Requiremnts:\r\n  - Implement a shopping cart system API.\r\n  - The user can create a cart with or without login\r\n  - The user can list products.\r\n  - The user can add products to the cart.\r\n  - The user can checkout by submitting their: name, address, and payment details.\r\n  - The order should be save with unique Id.\r\n  - If the user is logged in, the order should be linked to them.\r\n  - The user can list their previous orders.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User Authentication",
+			"item": [
+				{
+					"name": "/api/auth/signup",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Mohamad Bahamdain\",\n    \"email\": \"mhmd@gmail.com\",\n    \"password\": \"123\",\n    \"password_confirmation\": \"123\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/auth/signup",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								"signup"
+							]
+						},
+						"description": "sign up the user"
+					},
+					"response": [
+						{
+							"name": "http://127.0.0.1:8000/api/auth/signup",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Mohamad Bahamdain\",\n    \"email\": \"mhmd@gmail.com\",\n    \"password\": \"123\",\n    \"password_confirmation\": \"123\"\n}"
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/auth/signup",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"auth",
+										"signup"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 22 Feb 2019 10:40:27 +0000"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 22 Feb 2019 10:40:27 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.2.9"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully created user!\"\n}"
+						}
+					]
+				},
+				{
+					"name": "/api/auth/login",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"email\":\"mhmd@gmail.com\",\n\"password\":\"123\",\n\"remember_me\":true\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						},
+						"description": "user login to get api acess token"
+					},
+					"response": [
+						{
+							"name": "http://127.0.0.1:8000/api/auth/login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\"email\":\"mhmd@gmail.com\",\n\"password\":\"123\",\n\"remember_me\":true\n}"
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/auth/login",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 22 Feb 2019 10:42:15 +0000"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 22 Feb 2019 10:42:15 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.2.9"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"access_token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjRiNjhkOGZhZGVhZjlmNmM1NzUwMDhhYmEwYzk0NDNiYjQ5NzI4ZmQ5ZTA0ZjRkOGU3OTI3N2MxOTliMjNkNGNjMjhhNTQ0NWFkN2RjMWU0In0.eyJhdWQiOiIxIiwianRpIjoiNGI2OGQ4ZmFkZWFmOWY2YzU3NTAwOGFiYTBjOTQ0M2JiNDk3MjhmZDllMDRmNGQ4ZTc5Mjc3YzE5OWIyM2Q0Y2MyOGE1NDQ1YWQ3ZGMxZTQiLCJpYXQiOjE1NTA4MzIxMzUsIm5iZiI6MTU1MDgzMjEzNSwiZXhwIjoxNTgyMzY4MTM1LCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.BEBnDMrDVQYldl3gUneDu50Y8SPthug2-Sr4BZCnD_vzYJp2KMI2rUA2oPy6g20KJbrNMkL16HhoCp09MqhyWxfgKv21EbH5CFOHofQpxh2rvPdHfOIga6PZC7yDY1_fo7b2n1xxNge_gGF6-K3Aj5FpfHu8t2-7F0t6-s3cDDLZmmsb0g4ddt7wUHAIKCTw6FePwgll_Q0QHaeKTO7jL8OcKYcKatayWVZif1MU2gLCa2_Xw6Yuwmcsg_3FC2YYpYG9fOJLMVhe5uBItBLZIAKN9LiOHAc7VYljr59bYUbnFJDhYoa3TITHfSsSNGUwwAuT-pzDl6bVHum--194uEPhkWwdOr-dDugrwxaJ-J1Ir5rAg7U7hj1O7lbgsO_bkv1193ThWagRCHaY5qI1Wu-E7swdMSU9gMTGx2ytPXp2SdCOqZZAQ5ZGqQdyWuYi7q3ObuaTrxV1aZYmoPGu8WdFW-3dh_X1kbc0n5UxHDa-mm4BFA1BKGHW4BLQs8agDNZ3x_n8k2pKacEMbHjR3RyQHykSts5ly8ZhdqjUVqNA2K-rCIrqMdLoimRKuhNRpBzW9KDFNLWhNtvZnw-SHTz3Zkqe-1uwAchyi_eAcQhgCLElIMbbYd_bO_9LqOVR-LBwIEmzCrXn18gKfPttVO097pLsG916ZK4o3uZUHZs\",\n    \"token_type\": \"Bearer\",\n    \"expires_at\": \"2019-03-22 10:42:15\"\n}"
+						},
+						{
+							"name": "http://127.0.0.1:8000/api/auth/login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\"email\":\"mhmd@gaaamail.com\",\n\"password\":\"123\",\n\"remember_me\":true\n}"
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/auth/login",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 22 Feb 2019 12:21:25 +0000"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 22 Feb 2019 12:21:25 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.2.9"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Unauthorized\"\n}"
+						}
+					]
+				},
+				{
+					"name": "/api/auth/logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjllNjMzMjIwNmFjOTE2MGI0MWJmNmJiZTMyNjE4ZmE3ZDFkNzFkMjRkODA0MjNjMDMxZDJlNDU0ODk4ZDZkMzM4YTBlYzhlNzc3NzUyMDUwIn0.eyJhdWQiOiIxIiwianRpIjoiOWU2MzMyMjA2YWM5MTYwYjQxYmY2YmJlMzI2MThmYTdkMWQ3MWQyNGQ4MDQyM2MwMzFkMmU0NTQ4OThkNmQzMzhhMGVjOGU3Nzc3NTIwNTAiLCJpYXQiOjE1NTA4MzE1MzcsIm5iZiI6MTU1MDgzMTUzNywiZXhwIjoxNTgyMzY3NTM3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.0RxeknmUYDI7vwrglG6T5rMHOYCgx8rvgTJc16cT8N1pKRy2JhVA-MVtsiwEPEPqyJJHHWF2AEweTHQZ8H4U171ryFQWv6H4y1OIJIxxXM6C5ecylOkddI3jlJ0ve3CFfDWkGCp4XOWOXc_Owm-fLymKwS2ApcH-nfSYZ8Xg8Hnyr2YD5kWV_5CjyZg7u6ukqXY02RMUIFcT93vpDWetbQUyo6rH1MRR8Cs33S4xdu5jJIYw1IluBsGNcfkZCWbxkaR6oEqkLCo_i8jxq01qT-TG0W6oBB4RXbcDu8VHlsiIhUy_ZhN1BiLopnE0agcpIfD_duM10kYBpJoj5KWam5vXk-IbabrMljBUXeiT2zkhwOJoxkjNiOC9Ef5NC0I-xWpcW_vgn7H6RxSP1SWo1V6WP-tKD33DdOArJXnhXQPmjf-zqpZ3p2GKIPLDvOT6F_60nfqmvbqb6REwRqGjxvqqJC5Z8hC_-jlD4xNHeZ5f8_ZPHByxEHyub4K26NcDivyTCxg0Hk5EpAGPtn3SmEXdqDmVmjd20cexSRbwcDokYi7IqTx_-bm_xiUJCz09H5lzoqKACE6cTzi3-hTbn8CNKF_J9zMuOmFQONZKF_AG-tmYBSbLH_zL5tt6Sg5a3PbqICDaIBQz1c_Eo_Iv-Hx4WQqT1ubuLKLI4zZpMhc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman.",
+								"key": "Authorization",
+								"value": "Bearer {{APITOKEN}}",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/auth/logout",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								"logout"
+							]
+						},
+						"description": "logout the user"
+					},
+					"response": [
+						{
+							"name": "/api/auth/logout",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/auth/logout",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"auth",
+										"logout"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 22 Feb 2019 12:37:32 +0000"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 22 Feb 2019 12:37:32 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.2.9"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully logged out\"\n}"
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "noauth"
+			}
+		},
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "/api/products/",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/products/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"products",
+								""
+							]
+						},
+						"description": "list all products in the system"
+					},
+					"response": [
+						{
+							"name": "/api/products/",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/products/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"products",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 22 Feb 2019 12:34:40 +0000"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 22 Feb 2019 12:34:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.2.9"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Products\": [\n        {\n            \"id\": 1,\n            \"Name\": \"cupiditate\",\n            \"Category\": \"ut\",\n            \"price\": \"142.00\",\n            \"InStock\": true\n        },\n        {\n            \"id\": 2,\n            \"Name\": \"in\",\n            \"Category\": \"exercitationem\",\n            \"price\": \"933.00\",\n            \"InStock\": true\n        },\n        {\n            \"id\": 3,\n            \"Name\": \"veritatis\",\n            \"Category\": \"consequatur\",\n            \"price\": \"250.03\",\n            \"InStock\": true\n        },\n        {\n            \"id\": 4,\n            \"Name\": \"ut\",\n            \"Category\": \"dolorem\",\n            \"price\": \"984.00\",\n            \"InStock\": true\n        },\n        {\n            \"id\": 5,\n            \"Name\": \"rem\",\n            \"Category\": \"voluptate\",\n            \"price\": \"824.00\",\n            \"InStock\": true\n        },\n        {\n            \"id\": 6,\n            \"Name\": \"quibusdam\",\n            \"Category\": \"quia\",\n            \"price\": \"489.00\",\n            \"InStock\": true\n        },\n        {\n            \"id\": 7,\n            \"Name\": \"ut\",\n            \"Category\": \"voluptas\",\n            \"price\": \"764.00\",\n            \"InStock\": true\n        },\n        {\n            \"id\": 8,\n            \"Name\": \"autem\",\n            \"Category\": \"eos\",\n            \"price\": \"187.00\",\n            \"InStock\": true\n        },\n        {\n            \"id\": 9,\n            \"Name\": \"qui\",\n            \"Category\": \"reiciendis\",\n            \"price\": \"997.00\",\n            \"InStock\": true\n        },\n        {\n            \"id\": 10,\n            \"Name\": \"dolorem\",\n            \"Category\": \"et\",\n            \"price\": \"164.00\",\n            \"InStock\": true\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "/api/products/:id",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/products/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"products",
+								"1"
+							]
+						},
+						"description": "show the information of a single product"
+					},
+					"response": [
+						{
+							"name": "/api/products/:id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/products/1",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"products",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 22 Feb 2019 12:36:05 +0000"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 22 Feb 2019 12:36:05 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.2.9"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"Name\": \"cupiditate\",\n    \"Category\": \"ut\",\n    \"price\": \"142.00\",\n    \"InStock\": true\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Carts",
+			"item": [
+				{
+					"name": "/api/carts/",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "(optional) Authorization",
+								"type": "text",
+								"value": "Bearer {{APITOKEN}}",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/carts/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"carts",
+								""
+							]
+						},
+						"description": "Create a new Cart"
+					},
+					"response": [
+						{
+							"name": "http://127.0.0.1:8000/api/carts/",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/carts/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"carts",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 22 Feb 2019 10:43:39 +0000"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 22 Feb 2019 10:43:39 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.2.9"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Message\": \"A new cart have been created for you!\",\n    \"cartToken\": \"be3eb86bff045cbf77bb25b46cfc7696\",\n    \"cartKey\": \"3edd4f51771bde3f9613d07279f8efb8\"\n}"
+						}
+					]
+				},
+				{
+					"name": "/api/carts/:CartToken",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjllNjMzMjIwNmFjOTE2MGI0MWJmNmJiZTMyNjE4ZmE3ZDFkNzFkMjRkODA0MjNjMDMxZDJlNDU0ODk4ZDZkMzM4YTBlYzhlNzc3NzUyMDUwIn0.eyJhdWQiOiIxIiwianRpIjoiOWU2MzMyMjA2YWM5MTYwYjQxYmY2YmJlMzI2MThmYTdkMWQ3MWQyNGQ4MDQyM2MwMzFkMmU0NTQ4OThkNmQzMzhhMGVjOGU3Nzc3NTIwNTAiLCJpYXQiOjE1NTA4MzE1MzcsIm5iZiI6MTU1MDgzMTUzNywiZXhwIjoxNTgyMzY3NTM3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.0RxeknmUYDI7vwrglG6T5rMHOYCgx8rvgTJc16cT8N1pKRy2JhVA-MVtsiwEPEPqyJJHHWF2AEweTHQZ8H4U171ryFQWv6H4y1OIJIxxXM6C5ecylOkddI3jlJ0ve3CFfDWkGCp4XOWOXc_Owm-fLymKwS2ApcH-nfSYZ8Xg8Hnyr2YD5kWV_5CjyZg7u6ukqXY02RMUIFcT93vpDWetbQUyo6rH1MRR8Cs33S4xdu5jJIYw1IluBsGNcfkZCWbxkaR6oEqkLCo_i8jxq01qT-TG0W6oBB4RXbcDu8VHlsiIhUy_ZhN1BiLopnE0agcpIfD_duM10kYBpJoj5KWam5vXk-IbabrMljBUXeiT2zkhwOJoxkjNiOC9Ef5NC0I-xWpcW_vgn7H6RxSP1SWo1V6WP-tKD33DdOArJXnhXQPmjf-zqpZ3p2GKIPLDvOT6F_60nfqmvbqb6REwRqGjxvqqJC5Z8hC_-jlD4xNHeZ5f8_ZPHByxEHyub4K26NcDivyTCxg0Hk5EpAGPtn3SmEXdqDmVmjd20cexSRbwcDokYi7IqTx_-bm_xiUJCz09H5lzoqKACE6cTzi3-hTbn8CNKF_J9zMuOmFQONZKF_AG-tmYBSbLH_zL5tt6Sg5a3PbqICDaIBQz1c_Eo_Iv-Hx4WQqT1ubuLKLI4zZpMhc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"cartKey\":\"48445abfdb59e0864d37e819b9673435\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/carts/f66cbd13a8cbe608cecac80471edb6d1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"carts",
+								"f66cbd13a8cbe608cecac80471edb6d1"
+							]
+						},
+						"description": "display the items in Cart for a given cart"
+					},
+					"response": [
+						{
+							"name": "/api/carts/:CartToken",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/carts/f66cbd13a8cbe608cecac80471edb6d1",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"carts",
+										"f66cbd13a8cbe608cecac80471edb6d1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 22 Feb 2019 14:49:29 +0000"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 22 Feb 2019 14:49:29 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.2.9"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"cart\": \"f66cbd13a8cbe608cecac80471edb6d1\",\n    \"Items in Cart\": [\n        {\n            \"productID\": 1,\n            \"SKU\": \"86bab905499394bef18defeb10b4d893\",\n            \"price\": \"142.00\",\n            \"Name\": \"cupiditate\",\n            \"Quantity\": 1\n        },\n        {\n            \"productID\": 4,\n            \"SKU\": \"027283ae18a834cf4dc7d192d82d29d8\",\n            \"price\": \"984.00\",\n            \"Name\": \"ut\",\n            \"Quantity\": 3\n        },\n        {\n            \"productID\": 8,\n            \"SKU\": \"f2412b586bba2863221bbf8740b7a3ba\",\n            \"price\": \"187.00\",\n            \"Name\": \"autem\",\n            \"Quantity\": 5\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "/api/carts/:CartToken",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"cartKey\": \"48445abfdb59e0864d37e819b9673435\",\n    \"productID\": \"4\",\n    \"quantity\": \"3\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/carts/f66cbd13a8cbe608cecac80471edb6d1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"carts",
+								"f66cbd13a8cbe608cecac80471edb6d1"
+							]
+						},
+						"description": "add a product to the cart"
+					},
+					"response": [
+						{
+							"name": "/api/carts/:CartToken",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\"cartKey\":\"3edd4f51771bde3f9613d07279f8efb8\",\n\"productID\":\"3\",\n\"quantity\":\"2\"\n}"
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/carts/be3eb86bff045cbf77bb25b46cfc7696",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"carts",
+										"be3eb86bff045cbf77bb25b46cfc7696"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 22 Feb 2019 11:11:26 +0000"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 22 Feb 2019 11:11:26 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.2.9"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"The Cart was updated with the given product information successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "/api/carts/:CartToken/checkout",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "(optional) Authorization",
+								"value": "Bearer {{APITOKEN}}",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"cartKey\": \"0f1a05bb956fee349e8ea41c93db0742\",\n    \"name\": \"Mohamad bahamdain\",\n    \"adress\": \"2\",\n    \"credit card number\": \"4401946526618427\",\n    \"expiration_year\": \"2022\",\n    \"expiration_month\": \"03\",\n    \"cvc\": \"548\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/carts/3ccadfc2cbdf2c68ea2c181cf13cd8e3/checkout",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"carts",
+								"3ccadfc2cbdf2c68ea2c181cf13cd8e3",
+								"checkout"
+							]
+						},
+						"description": "checkout the cart items"
+					},
+					"response": [
+						{
+							"name": "http://127.0.0.1:8000/api/carts/3ccadfc2cbdf2c68ea2c181cf13cd8e3/checkout",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"cartKey\": \"0f1a05bb956fee349e8ea41c93db0742\",\n    \"name\": \"Mohamad Bahamdain\",\n    \"adress\": \"Riyadh\",\n    \"credit card number\": \"4401946526618427\",\n    \"expiration_year\": \"2022\",\n    \"expiration_month\": \"03\",\n    \"cvc\": \"548\"\n}"
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/carts/3ccadfc2cbdf2c68ea2c181cf13cd8e3/checkout",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"carts",
+										"3ccadfc2cbdf2c68ea2c181cf13cd8e3",
+										"checkout"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 22 Feb 2019 10:49:44 +0000"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 22 Feb 2019 10:49:44 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.2.9"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"you're order has been completed succefully, thanks for shopping with us!\",\n    \"orderID\": 1\n}"
+						}
+					]
+				},
+				{
+					"name": "/api/carts/:CartToken",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"cartKey\": \"933cf0ce3cfbc3a8e87f375c9c5819c5\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/carts/e3dcc2c26bbd7a7babbd62c4037d4302",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"carts",
+								"e3dcc2c26bbd7a7babbd62c4037d4302"
+							]
+						},
+						"description": "delete a given cart"
+					},
+					"response": [
+						{
+							"name": "/api/carts/e3dcc2c26bbd7a7babbd62c4037d4302",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"cartKey\": \"933cf0ce3cfbc3a8e87f375c9c5819c5\"\n}"
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/carts/e3dcc2c26bbd7a7babbd62c4037d4302",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"carts",
+										"e3dcc2c26bbd7a7babbd62c4037d4302"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 22 Feb 2019 14:10:33 +0100"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 22 Feb 2019 13:10:33 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.2.9"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Content-type",
+									"value": "text/html; charset=UTF-8"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Orders",
+			"item": [
+				{
+					"name": "/api/orders",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjllNjMzMjIwNmFjOTE2MGI0MWJmNmJiZTMyNjE4ZmE3ZDFkNzFkMjRkODA0MjNjMDMxZDJlNDU0ODk4ZDZkMzM4YTBlYzhlNzc3NzUyMDUwIn0.eyJhdWQiOiIxIiwianRpIjoiOWU2MzMyMjA2YWM5MTYwYjQxYmY2YmJlMzI2MThmYTdkMWQ3MWQyNGQ4MDQyM2MwMzFkMmU0NTQ4OThkNmQzMzhhMGVjOGU3Nzc3NTIwNTAiLCJpYXQiOjE1NTA4MzE1MzcsIm5iZiI6MTU1MDgzMTUzNywiZXhwIjoxNTgyMzY3NTM3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.0RxeknmUYDI7vwrglG6T5rMHOYCgx8rvgTJc16cT8N1pKRy2JhVA-MVtsiwEPEPqyJJHHWF2AEweTHQZ8H4U171ryFQWv6H4y1OIJIxxXM6C5ecylOkddI3jlJ0ve3CFfDWkGCp4XOWOXc_Owm-fLymKwS2ApcH-nfSYZ8Xg8Hnyr2YD5kWV_5CjyZg7u6ukqXY02RMUIFcT93vpDWetbQUyo6rH1MRR8Cs33S4xdu5jJIYw1IluBsGNcfkZCWbxkaR6oEqkLCo_i8jxq01qT-TG0W6oBB4RXbcDu8VHlsiIhUy_ZhN1BiLopnE0agcpIfD_duM10kYBpJoj5KWam5vXk-IbabrMljBUXeiT2zkhwOJoxkjNiOC9Ef5NC0I-xWpcW_vgn7H6RxSP1SWo1V6WP-tKD33DdOArJXnhXQPmjf-zqpZ3p2GKIPLDvOT6F_60nfqmvbqb6REwRqGjxvqqJC5Z8hC_-jlD4xNHeZ5f8_ZPHByxEHyub4K26NcDivyTCxg0Hk5EpAGPtn3SmEXdqDmVmjd20cexSRbwcDokYi7IqTx_-bm_xiUJCz09H5lzoqKACE6cTzi3-hTbn8CNKF_J9zMuOmFQONZKF_AG-tmYBSbLH_zL5tt6Sg5a3PbqICDaIBQz1c_Eo_Iv-Hx4WQqT1ubuLKLI4zZpMhc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman.",
+								"key": "Authorization",
+								"value": "Bearer {{APITOKEN}}",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/orders/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"orders",
+								""
+							]
+						},
+						"description": "List the orders of the authinticated user."
+					},
+					"response": [
+						{
+							"name": "{{Url}}/api/orders",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/orders/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"orders",
+										""
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 22 Feb 2019 12:40:30 +0000"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 22 Feb 2019 12:40:30 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.2.9"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Unauthenticated.\"\n}"
+						},
+						{
+							"name": "{{Url}}/api/orders",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/orders",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"orders"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 22 Feb 2019 12:08:29 +0000"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 22 Feb 2019 12:08:29 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.2.9"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Orders\": [\n        {\n            \"OrderID\": 3,\n            \"Ordered Products:\": [\n                {\n                    \"productID\": 3,\n                    \"SKU\": \"63bf2063f9dfbbf45a940c9d86b568a5\",\n                    \"price\": \"250.03\",\n                    \"Name\": \"veritatis\",\n                    \"Quantity\": 2\n                }\n            ],\n            \"Total Price\": \"500.06\",\n            \"name\": \"Mohamad Bahamdain\",\n            \"address\": \"Riyadh\",\n            \"transactionID\": \"a758d75dd2fe9f2b6074d5c2d4eac76a\"\n        }\n    ],\n    \"orders_count\": 1\n}"
+						}
+					]
+				},
+				{
+					"name": "/api/orders/:orderID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjczMDViYmYyMzVkYmYyZTIxYjc2Yjk0NTkwY2YzZDA1ZTZmMTVmMWVjNTI1MTJjOTAxZDcwYjI0ODRjMmM2ZDI1ZDY4N2I3NzIxY2NmYmJhIn0.eyJhdWQiOiIxIiwianRpIjoiNzMwNWJiZjIzNWRiZjJlMjFiNzZiOTQ1OTBjZjNkMDVlNmYxNWYxZWM1MjUxMmM5MDFkNzBiMjQ4NGMyYzZkMjVkNjg3Yjc3MjFjY2ZiYmEiLCJpYXQiOjE1NTA4MzkzODcsIm5iZiI6MTU1MDgzOTM4NywiZXhwIjoxNTgyMzc1Mzg3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.aX7JOLQijY6gTXQp6QyFcDmQnt-npfbL7qTZhmJct1S5L6HkXQqJ3V6OaCsON57W1FdotGfPF_H7lfnxmWnA8N4AbWVyqojWMmpy5O2zf1c8o2eL7s928mds30RDGWPVS4pp5IRiM4WScKi5Vxgzuw5ONvGG3zU-HiifRXcFTxK1uwjmUqhY-zIT5169GWTT9asM2S4ynizPrQoLuARXywKqLk4uo2CKYMYg6TuaQ5axzRvSP88mA0i9Jx-hgM_ntIzTUapFYQDvhQ8D_fissrIhwSkaNs39moFfmtgJcRNPul8dP51SV_IhKUeLS7O94GoC-iRz_zZfsQWe7ynZa22SjNpVXQAx-xGqs4EWOCw_-jyRkaKywvl0EDmwy21rThSlNv6uY62Q_G2RMijGWQg9fHpWvoIjuLxJ-t_oaau63IqaIw6cLZRrv_YAJ26EAAIm3ncCzqBY7dJ6IoR27yGelT03i90i2xBCUFtEg88Xwer50yeNxjhtHTnduiZyAWr8wwmn7sGeEOFtn69rDssPHaUiZzDSNGF7K9V8EKi5zIVqtTmfcE70b0yP2_6BTsyl5eentHagg6DSMTCcWHd_5lt49OFa9oc9RsA9x2gIU5R5WTf9kaa-6UOdEYIizj6UyvMFcI7nAk9JFctLGKeSIiz10hasBpKqyL6XWiQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman.",
+								"key": "Authorization",
+								"value": "Bearer {{APITOKEN}}",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/orders/3",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"orders",
+								"3"
+							]
+						},
+						"description": "show the information of a single order"
+					},
+					"response": [
+						{
+							"name": "{{Url}}/api/orders/3",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman.",
+										"key": "Authorization",
+										"value": "Bearer {{APITOKEN}}",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/orders/3",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"orders",
+										"3"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 22 Feb 2019 12:54:41 +0000"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 22 Feb 2019 12:54:41 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.2.9"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"The order you're trying to view doesn't seem to be yours, hmmmm.\"\n}"
+						},
+						{
+							"name": "{{Url}}/api/orders/3",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman.",
+										"key": "Authorization",
+										"value": "Bearer {{APITOKEN}}",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/orders/3",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"orders",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 22 Feb 2019 12:51:45 +0000"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 22 Feb 2019 12:51:45 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.2.9"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"OrderID\": 3,\n    \"Ordered Products:\": [\n        {\n            \"productID\": 3,\n            \"SKU\": \"63bf2063f9dfbbf45a940c9d86b568a5\",\n            \"price\": \"250.03\",\n            \"Name\": \"veritatis\",\n            \"Quantity\": 2\n        }\n    ],\n    \"Total Price\": \"500.06\",\n    \"name\": \"Mohamad Bahamdain\",\n    \"address\": \"Riyadh\",\n    \"transactionID\": \"a758d75dd2fe9f2b6074d5c2d4eac76a\"\n}"
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjllNjMzMjIwNmFjOTE2MGI0MWJmNmJiZTMyNjE4ZmE3ZDFkNzFkMjRkODA0MjNjMDMxZDJlNDU0ODk4ZDZkMzM4YTBlYzhlNzc3NzUyMDUwIn0.eyJhdWQiOiIxIiwianRpIjoiOWU2MzMyMjA2YWM5MTYwYjQxYmY2YmJlMzI2MThmYTdkMWQ3MWQyNGQ4MDQyM2MwMzFkMmU0NTQ4OThkNmQzMzhhMGVjOGU3Nzc3NTIwNTAiLCJpYXQiOjE1NTA4MzE1MzcsIm5iZiI6MTU1MDgzMTUzNywiZXhwIjoxNTgyMzY3NTM3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.0RxeknmUYDI7vwrglG6T5rMHOYCgx8rvgTJc16cT8N1pKRy2JhVA-MVtsiwEPEPqyJJHHWF2AEweTHQZ8H4U171ryFQWv6H4y1OIJIxxXM6C5ecylOkddI3jlJ0ve3CFfDWkGCp4XOWOXc_Owm-fLymKwS2ApcH-nfSYZ8Xg8Hnyr2YD5kWV_5CjyZg7u6ukqXY02RMUIFcT93vpDWetbQUyo6rH1MRR8Cs33S4xdu5jJIYw1IluBsGNcfkZCWbxkaR6oEqkLCo_i8jxq01qT-TG0W6oBB4RXbcDu8VHlsiIhUy_ZhN1BiLopnE0agcpIfD_duM10kYBpJoj5KWam5vXk-IbabrMljBUXeiT2zkhwOJoxkjNiOC9Ef5NC0I-xWpcW_vgn7H6RxSP1SWo1V6WP-tKD33DdOArJXnhXQPmjf-zqpZ3p2GKIPLDvOT6F_60nfqmvbqb6REwRqGjxvqqJC5Z8hC_-jlD4xNHeZ5f8_ZPHByxEHyub4K26NcDivyTCxg0Hk5EpAGPtn3SmEXdqDmVmjd20cexSRbwcDokYi7IqTx_-bm_xiUJCz09H5lzoqKACE6cTzi3-hTbn8CNKF_J9zMuOmFQONZKF_AG-tmYBSbLH_zL5tt6Sg5a3PbqICDaIBQz1c_Eo_Iv-Hx4WQqT1ubuLKLI4zZpMhc",
+						"type": "string"
+					}
+				]
+			}
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
