@@ -4,8 +4,8 @@ before they can submit the cart order. There will be message to inform this.
 # I am using php laravel. 
 
 # Instalation :
-$ Composer install
-$ php artisan key:generate
-$ php artisan migrate
-$ php artisan passport:install
+$ Composer install </br>
+$ php artisan key:generate </br>
+$ php artisan migrate </br>
+$ php artisan passport:install </br>
 $ php artisan db:seed
