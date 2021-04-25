@@ -20,7 +20,7 @@ then open Postman and import Postman Collection
 
 Database Schema : in folder Database Schema. </br>  
 
-Postman Collection & API endpoints design : in folder  Postman Collection. </br>  
+Postman Collection (API endpoints design) : in folder  Postman Collection. </br>  
 
 # How to test (using Postman) :
 
