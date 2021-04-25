@@ -31,8 +31,7 @@ Postman Collection (API endpoints design) : in folder Postman Collection. </br>
 3. use POST /api/carts/:CartToken in folder Carts to add cart</br>
    replace f9508a7d6e438beddb6912f7f90f2b12 with cartToken from no 3.</br> 
    Replace cartKey in body raw with cartKey from no 3.</br>
-   Replace productID with id of products from such as 21 </br>
-   Replace quantity with 30 and click the button "Send"</br>
+   Replace productID in body raw with one of the id from products. I am using id = 21 </br>
+   Replace quantity in body raw with 30 and click the button "Send"</br>
 4. use POST /api/carts/:CartToken/checkout in folder Carts to order the cart</br>
-   You will get validation 'The quantity you're ordering of  isn't available in stock'  
-  
+   You will get validation 'The quantity you're ordering of  isn't available in stock'
