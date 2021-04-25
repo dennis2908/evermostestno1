@@ -6,7 +6,7 @@ before they can submit the cart order. There will be message to inform this.  </
 I am using php laravel. </br>  
 
 # Instalation :
-$ Composer install </br>
+$ composer install </br>
 $ php artisan key:generate </br>
 $ php artisan migrate </br>
 $ php artisan passport:install </br>
