@@ -15,7 +15,7 @@ class UserTest extends TestCase
      */
     public function testExample()
     {
-		// Check if user directly use GET api/carts will not give 200 status
+		// Check if someone directly use GET api/carts, it will not give 200 status.
 		
         $response = $this->get('/api/carts');
 		

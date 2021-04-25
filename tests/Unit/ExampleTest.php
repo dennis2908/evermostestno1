@@ -14,7 +14,7 @@ class ExampleTest extends TestCase
      */
     public function testBasicTest()
     {
-        // Check if user directly use POST /api/auth/login will give message 'Unauthorized'.
+        // Check if someone directly uses POST /api/auth/login with wrong information, it will give message 'Unauthorized'.
 		$response = $this->json('POST', '/api/auth/login', ['email' => 'mhmd@gmail.com','password' => '1234'])->assertJson(['message' => "Unauthorized"]);
 		
     }

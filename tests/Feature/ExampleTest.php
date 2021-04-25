@@ -14,7 +14,7 @@ class ExampleTest extends TestCase
      */
     public function testBasicTest()
     {
-		// check if user directly use GET api/auth/signup will not give 200 status
+		// check if someone directly use GET api/auth/signup, it will not give 200 status
 		
        $response = $this->get('api/orders/');
 
