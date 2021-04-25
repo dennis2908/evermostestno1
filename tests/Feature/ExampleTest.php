@@ -14,8 +14,10 @@ class ExampleTest extends TestCase
      */
     public function testBasicTest()
     {
-       $response = $this->get('api/auth/signup');
+		// check if user directly use GET api/auth/signup will not give 200 status
+		
+       $response = $this->get('api/orders/');
 
-        $response->assertStatus(405);
+       $response->assertStatus(302);
     }
 }
