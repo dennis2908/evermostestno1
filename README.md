@@ -7,7 +7,7 @@ before they can submit the cart order. There will be message to inform this.</br
 
 I am using php laravel, API, Postman, authentication, MYSQL.
 
-# Instalation and running server locally:
+# Instalation and running server locally :
 1. Use command prompt and direct to root folder and type :</br>
    $ composer install</br>
 2. Rename file .env.example to .env in root folder.</br>
