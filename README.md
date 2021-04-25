@@ -33,7 +33,7 @@ Postman Collection (API endpoints design) : in folder Postman Collection. </br>
    Click the button "Send".</br>
 2. Use POST /api/auth/login in folder User Authentication to login.</br> 
    Click the button "Send".</br>
-3. Use POST /api/carts/ in folder Carts to start cart.
+3. Use POST /api/carts/ in folder Carts to start cart.</br>
    Click the button "Send".</br>  
    You will get cartToken and cartKey.</br> 
 4. Use POST /api/carts/:CartToken in folder Carts to add cart.</br>
