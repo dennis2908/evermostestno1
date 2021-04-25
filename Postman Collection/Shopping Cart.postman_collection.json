@@ -916,10 +916,10 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"cartKey\": \"48445abfdb59e0864d37e819b9673435\",\n    \"productID\": \"4\",\n    \"quantity\": \"3\"\n}"
+							"raw": "{\n    \"cartKey\": \"057536a843f9e4779b847b0dce3807dd\",\n    \"productID\": \"3\",\n    \"quantity\": \"5\"\n}"
 						},
 						"url": {
-							"raw": "http://127.0.0.1:8000/api/carts/f66cbd13a8cbe608cecac80471edb6d1",
+							"raw": "http://127.0.0.1:8000/api/carts/f9508a7d6e438beddb6912f7f90f2b12",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -931,7 +931,7 @@
 							"path": [
 								"api",
 								"carts",
-								"f66cbd13a8cbe608cecac80471edb6d1"
+								"f9508a7d6e438beddb6912f7f90f2b12"
 							]
 						},
 						"description": "add a product to the cart"
