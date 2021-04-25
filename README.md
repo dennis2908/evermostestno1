@@ -39,7 +39,7 @@ Postman Collection (API endpoints design) : in folder Postman Collection. </br>
 4. Use POST /api/carts/:CartToken in folder Carts (to add cart).</br>
    Replace f9508a7d6e438beddb6912f7f90f2b12 in url with cartToken from no 3.</br> 
    Replace cartKey in body raw with cartKey from no 3.</br>
-   Open the data of table products in database.</br>
+   Open the data of table products in the database.</br>
    Replace productID in body raw with one of the id from table products for example id = 6.</br>
    Replace quantity in body raw with a number higher than UnitsInStock of the products.</br>
    Note : if id = 6 has UnitsInStock = 20 then Replace quantity in body raw with 21 or higher.</br>
