@@ -22,7 +22,7 @@ Database Schema : in folder Database Schema. </br>
 
 Postman Collection (API endpoints design) : in folder Postman Collection. </br>  
 
-# How to test (using Postman) :
+# How to do functionality test (using Postman) :
 
 1. Use POST /api/auth/signup folder User Authentication and click the button "Send" to register user.</br>  
 2. Use POST /api/auth/login in folder User Authentication to login.</br>  
