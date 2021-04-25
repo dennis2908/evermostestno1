@@ -28,7 +28,7 @@ Postman Collection (API endpoints design) : in folder Postman Collection. </br>
 2. Use POST /api/auth/login in folder User Authentication to login.</br>  
 3. Use POST /api/carts/ in folder Carts to start cart.  
    You will get cartToken and cartKey.</br> 
-3. use POST /api/carts/:CartToken in folder Carts to add cart.</br>
+3. Use POST /api/carts/:CartToken in folder Carts to add cart.</br>
    Replace f9508a7d6e438beddb6912f7f90f2b12 in url with cartToken from no 3.</br> 
    Replace cartKey in body raw with cartKey from no 3.</br>
    Replace productID in body raw with one of the id from products. I am using id = 21.</br>
