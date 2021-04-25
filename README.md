@@ -8,8 +8,8 @@ before they can submit the cart order. There will be message to inform this.</br
 I am using php laravel, API, Postman, authentication, MYSQL.
 
 # Instalation and running server locally:
-1. Use command prompt and direct to root folder and type :
-   $ composer install </br>
+1. Use command prompt and direct to root folder and type :</br>
+   $ composer install</br>
 2  Rename.env.example to .env in root folder.</br>
    Open the .env and adjust DB_HOST, DB_PORT, DB_DATABASE, DB_USERNAME, DB_PASSWORD to your MYSQL setting</br>
 3. Use command prompt and direct to root folder and type :  
