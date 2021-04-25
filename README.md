@@ -14,13 +14,13 @@ $ php artisan migrate </br>
 $ php artisan passport:install </br>
 $ php artisan db:seed </br>
 $ php artisan serve </br>
-then open Postman and import Postman Collection
+then open Postman and import Shopping Cart.postman_collection.json
 
 # Notes :
 
 Database Schema : in folder Database Schema. </br>  
 
-Postman Collection (API endpoints design) : in folder  Postman Collection. </br>  
+Postman Collection (API endpoints design) : in folder Postman Collection. </br>  
 
 # How to test (using Postman) :
 
