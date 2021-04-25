@@ -25,8 +25,8 @@ Postman Collection (API endpoints design) : in folder Postman Collection. </br>
 # How to do functionality test (using Postman) :
 
 1. Use POST /api/auth/signup folder User Authentication and click the button "Send" to register user.</br>  
-2. Use POST /api/auth/login in folder User Authentication to login.</br>  
-3. Use POST /api/carts/ in folder Carts to start cart.  
+2. Use POST /api/auth/login in folder User Authentication and click the button "Send" to login.</br>  
+3. Use POST /api/carts/ in folder Carts and click the button "Send" to start cart.  
    You will get cartToken and cartKey.</br> 
 3. Use POST /api/carts/:CartToken in folder Carts to add cart.</br>
    Replace f9508a7d6e438beddb6912f7f90f2b12 in url with cartToken from no 3.</br> 
