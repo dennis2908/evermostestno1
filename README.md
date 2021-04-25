@@ -7,7 +7,7 @@ before they can submit the cart order. There will be message to inform this.  </
 
 I am using php laravel, API, Postman, authentication, MYSQL.
 
-# Instalation and running:
+# Instalation and running server locally:
 $ composer install </br>
 $ php artisan key:generate </br>
 $ php artisan migrate </br>
