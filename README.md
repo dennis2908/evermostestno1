@@ -9,3 +9,7 @@ $ php artisan key:generate </br>
 $ php artisan migrate </br>
 $ php artisan passport:install </br>
 $ php artisan db:seed
+
+Database Schema : in folder Database Schema. </br>  
+
+Postman Collection  : in folder  Postman Collection. </br>  
